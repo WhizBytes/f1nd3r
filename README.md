@@ -1,2 +1,2 @@
-# Pentest-Setup
-Unlock the full potential of your Debian or Ubuntu distro and transform it into a powerful pentesting machine that rivals the gods of cybersecurity! Get ready to dive deep into the world of penetration testing with tools and configurations that will elevate your skills to the next level!
+# WhizShell
+The ultimate bind shell bash script designed for penetration testers. Streamlined and powerful, WhizShell provides seamless remote access, allowing you to execute commands and gain control over target systems with ease. Elevate your testing capabilities and stay one step ahead in your security assessments. Perfect for professionals seeking efficiency and effectiveness in their toolkit!
