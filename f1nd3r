@@ -1,0 +1,121 @@
+#!/bin/bash
+a="\033[31m";b="\033[92m";c="\033[32m";d="\033[33m";e="\033[34m";f="\033[35m";g="\033[36m";h="\033[37m";i="\033[0m";j=("0wn3d!" "Hack the planet!" "Vuln = Opportunity." "Exploit, don’t explain." "S3cure the weak." "Pwned by the code." "F1nd it, break it." "Root or nothing." "C0d3 is law." "Stay frosty, hack hard." "H4ckers gonna hack." "Find, fix, repeat." "Infiltrate the system." "Vulns are just puzzles." "Decrypting the world." "Every byte counts." "W3b 0wn3r." "Access granted." "Behind every screen, a hacker." "Script kiddies beware." "Code, coffee, conquer." "Break it till you make it." "Scripting my own reality." "The only limit is your mind." "Knowledge is the ultimate weapon." "Stay stealthy, stay safe." "Exploit the weakness." "Not all heroes wear capes." "Hacking is an art." "Living in the matrix." "Data is the new oil." "Finders keepers, right?" "Google is your best friend." "The web never forgets." "Search like a detective." "OSINT: The art of knowing." "Everything is public if you look hard enough." "Dig deep, uncover truth." "The more you know, the more you find." "Information is power." "Social media: A goldmine of intel." "Every profile tells a story." "Look beyond the surface." "Footprints are everywhere." "The internet is a treasure chest." "In the shadows of the web." "Connecting the dots." "Public records, private stories." "The search is half the fun." "Patience is key in OSINT.")
+k=$(( RANDOM % ${#j[@]} ));l=${j[$k]}
+
+# Function to display interface
+m() {
+    echo -e "${h}|───────────────────────────────────────────────────────────────────────|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::::::::${a}=*#%%%+. =${b}::::::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::::${a}=*%%       =@+=${b}::::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}-+%             #=${b}:::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}+                #=${b}::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}#                 *${b}::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}#                 %${b}::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}#                 %${b}::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::${a}-%                 %-${b}:::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::${a}=-                 +-${b}:::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::${a}=                  +-${b}:::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::${a}=*                 *-${b}:::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}+:               @=${b}::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::${a}-#               *${b}:::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::::${a}=#             %=${b}:::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::::::${a}#.           :*${b}::::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::::${a}=%            .%=${b}:::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::::${a}*               *${b}:::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::::::::::::::${a}=*#@               @#*=${b}::::::::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::${a}-+*%%%                     @%%*=-${b}:::::::::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::${a}-+#%%+                             #%%#+-${b}:::::::::::::: ${h}|"
+    echo -e "${h}| ${b}:::::::::::${a}-+#@                                      :%*+-${b}::::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::${a}=#             ${h}F1ND3R by WhizBytes            ${a}=*=${b}:::::::::: ${h}|"
+    echo -e "${h}| ${b}::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ${h}|"
+    echo -e "${h}|───────────────────────────────────────────────────────────────────────|"
+    echo
+    echo -e "Message of the Day: ${d}${l}${i}"
+    echo
+}
+
+m
+
+n="";o=("-h, --help: Display help information and exit." "-v, --version: Show version information and exit." "-o, --output: Save the results to a specified output file.")
+p="${0} version 1.0"
+
+# Help function
+q() {
+    echo "Usage: ${0} <username> [options]"
+    echo
+    for r in "${o[@]}"; do
+        echo "${r}"
+    done
+    exit 0
+}
+
+# Version function
+s() {
+    echo "${p}"
+    exit 0
+}
+
+# Handle arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h|--help) q ;;
+        -v|--version) s ;;
+        -o|--output) 
+            t="$2"
+            if [[ -z "${t}" ]]; then 
+                echo -e "${a}Error: ${h}No output file specified.${i}"
+                exit 1
+            fi
+            echo -e "Output will be saved to: ${d}${t}"
+            echo
+            shift
+            ;;
+        *) 
+            if [[ -z "${n}" ]]; then 
+                n="$1"
+            else 
+                echo -e "${a}Error: ${h}Multiple usernames provided.${i}"
+                exit 1
+            fi
+            ;;
+    esac
+    shift
+done
+
+# Check if username is provided
+if [[ -z "${n}" ]]; then
+    echo -e "${a}Error: ${h}No username provided.${i}"
+    echo
+    q
+fi
+
+u=("Twitter: https://twitter.com/${n}" "Instagram: https://instagram.com/${n}" "Facebook: https://facebook.com/${n}" "LinkedIn: https://linkedin.com/in/${n}" "Github: https://github.com/${n}" "Reddit: https://reddit.com/user/${n}" "Tumblr: https://${n}.tumblr.com/" "Snapchat: https://www.snapchat.com/add/${n}" "Pinterest: https://www.pinterest.com/${n}/" "Youtube: https://www.youtube.com/@${n}" "Tiktok: https://www.tiktok.com/@${n}" "Flickr: https://www.flickr.com/people/${n}/" "SoundCloud: https://soundcloud.com/${n}" "Vimeo: https://vimeo.com/${n}" "Behance: https://www.behance.net/${n}" "VK: https://vk.com/${n}" "Weibo: https://weibo.com/${n}" "Medium: https://medium.com/@${n}" "Quora: https://www.quora.com/profile/${n}" "Last.fm: https://www.last.fm/user/${n}" "Twitch: https://www.twitch.tv/${n}" "Mastodon: https://mastodon.social/@${n}" "Product Hunt: https://www.producthunt.com/@${n}")
+
+v() {
+    if [[ -n "${t}" ]]; then
+        touch "${t}"
+    fi
+
+    for x in "${u[@]}"; do
+        IFS=": " read -r y z <<< "${x}"
+
+        z2=$(curl -s -o /dev/null -w "%{http_code}" "$z")
+
+        case $z2 in
+            200) a1="${h}[${c}+${h}] ${y}: ${c}${z} ${c}${z2}${i}" ;;
+            404) a1="${h}[${a}x${h}] ${y}: ${a}${z} ${a}${z2}${i}" ;;
+            301|302) a1="${h}[${d}>${h}] ${y}: ${d}${z} ${d}${z2}${i}" ;;
+            403) a1="${h}[${g}-${h}] ${y}: ${g}${z} ${g}${z2}${i}" ;;
+            *) a1="${h}[?] ${y}: ${z} ${h}${z2}${i}" ;;
+        esac
+
+        if [[ -n "$t" ]]; then
+            echo -e "$a1" | tee -a "$t"
+        else
+            echo -e "$a1"
+        fi
+    done
+}
+
+v
